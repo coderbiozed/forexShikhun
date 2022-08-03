@@ -1,0 +1,1385 @@
+@media only screen and (max-width: 575px) {
+
+    /* =====================home-page-style-starts==================== */
+
+
+    /* ----------hero-sec-start----------- */
+
+    .navbar_brand {
+        width: 200px;
+        margin: 0;
+    }
+
+    .sec_hero {
+        min-height: 768px;
+        padding-top: 50px;
+    }
+
+    .hero_main {
+        top: 50px;
+    }
+
+    .hero_heading {
+        font-size: 45px;
+        font-weight: 500;
+    }
+
+    .hero_des {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .hero_img {
+        transform: scale(1.3);
+        right: -22%;
+        top: -80px;
+        width: 100%;
+    }
+
+    .hero_img_1 {
+        bottom: -15%;
+        left: -30%;
+        transform: scale(1.2);
+    }
+
+    .shape_1 {
+        top: 40%;
+    }
+
+
+    /* ----------hero-sec-ends----------- */
+
+
+    /* ---------article-sec-starts------- */
+
+    .bottom_cont_parts {
+        font-size: 12px;
+    }
+
+    /* ---------article-sec-ends------- */
+
+    .sec_heading {
+        font-size: 28px;
+        margin: 0 auto 25px;
+    }
+
+    .cust_btn {
+        padding: 6px 12px;
+    }
+
+
+    /* =====================home-page-style-ends=================== */
+
+
+
+
+    /* ===============course-details-page-style-starts============= */
+
+    .c_det_hero_inner {
+        padding: 14px;
+        margin-top: 0;
+    }
+
+    .cou_det_her_img {
+        float: none;
+        display: block;
+        margin: 0;
+    }
+
+    .cou_det_her_img img {
+        max-width: 100%;
+    }
+
+    .cou_det_her_head {
+        margin-top: 18px;
+    }
+
+    .c_bt_des_main {
+        margin-top: 0;
+    }
+
+    .c_bt_des h4 {
+        margin-top: 10px;
+    }
+
+    .c_det_sh_title {
+        text-align: center;
+    }
+
+    .c_det_share {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cou_det_bt_navs .cust_btn {
+        padding: 5px 10px;
+    }
+
+    .c_nav_title {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .c_navs {
+        justify-content: space-between;
+    }
+
+    .c_det_art_col {
+        display: none;
+    }
+
+    .c_cont_main {
+        padding: 14px;
+    }
+
+    .c_count {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .c_cont_p {
+        margin-left: 30px;
+    }
+
+    .c_divider {
+        margin: 24px 0;
+    }
+
+    .c_content_navs .cust_btn {
+        padding: 5px 10px;
+    }
+
+    .c_side_col {
+        display: none;
+    }
+
+    .c_cont_sm_menu {
+        display: flex;
+        padding: 6px 12px;
+    }
+
+    .c_cont_main .nav {
+        box-shadow: none;
+        overflow: visible;
+        height: 870px;
+    }
+
+    .offcanvas-body {
+        padding: 0;
+    }
+
+    .offcanvas-start {
+        width: 300px;
+    }
+    .less_description p iframe {
+        height: 300px;
+        width: 100%;
+    }
+    /* =================course-details-style-ends================== */
+
+
+
+
+    /* ====================blog-det-page-style-starts================ */
+
+    .b_det_main {
+        padding: 12px;
+    }
+
+    .b_det_pub {
+        font-size: 14px;
+    }
+
+    .pub_ow a {
+        gap: 6px;
+    }
+
+    .pub_ow .pub_img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .b_meta_det {
+        gap: 10px 20px;
+    }
+
+    .b_det_com {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .b_det_com_reply {
+        padding: 0;
+        width: 90%;
+        margin-left: auto;
+    }
+
+    .b_det_com_bo_meta {
+        gap: 16px;
+    }
+
+    .b_det_com_cont {
+        padding: 24px 12px 12px;
+    }
+
+    .b_det_com .sign_user {
+        top: 24px;
+        left: 12px;
+    }
+
+    .b_det_com_fo {
+        gap: 8px;
+    }
+
+    .b_det_com_t_main {
+        gap: 0;
+    }
+
+    .b_det_com_main {
+        margin-bottom: 0;
+    }
+
+    .b_det_p_co_title {
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+
+    /* ====================blog-det-page-style-ends================== */
+
+
+
+
+    /* ====================about-page-style-starts================== */
+
+
+    .sec_about {
+        padding: 45px 0;
+    }
+
+    .ab_c_title {
+        font-size: 36px;
+    }
+
+    .about_img {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .sa_2 {
+        padding-top: 10px;
+    }
+
+    .as_sec_us {
+        padding: 0 0 35px;
+    }
+
+    .ab_exp {
+        margin-bottom: 25px;
+    }
+
+    .sec_quote {
+        padding: 0px 0 40px;
+    }
+
+    .sec_quote .owl-carousel .owl-stage-outer .owl-item {
+        padding: 0px 18px;
+    }
+
+    .sec_quote .item p i {
+        font-size: 24px;
+        left: -28px;
+        top: -8px;
+    }
+
+    .sec_quote .item p {
+        padding: 0;
+        font-size: 30px;
+    }
+
+
+    /* =====================about-page-style-ends=================== */
+
+
+
+    /* ====================contact-page-style-starts================== */
+
+    .s_cont_header {
+        font-size: 36px;
+    }
+    .s_cont_des {
+        width: 100%;
+    }
+    .c_map {
+        height: 350px;
+        padding: 8px;
+    }
+    .c_newsletter input {
+        width: 100%;
+    }
+    .cont_inner_main {
+        padding: 12px;
+        margin-top: 20px;
+    }
+    .cont_meta_info_bo {
+        margin-bottom: 30px;
+    }
+    .sec_contact {
+        padding: 28px 0 20px;
+    }
+    .cont_meta_info {
+        width: 65px;
+        height: 65px;
+        font-size: 24px;
+    }
+
+    /* =====================contact-page-style-ends=================== */
+
+
+
+
+    /* ============profile-dashboard-page-style-starts=========== */
+
+
+    .my_pro_act_navs .nav {
+        justify-content: unset;
+        gap: 16px;
+        margin-top: 15px;
+    }
+    .my_pro_det {
+        justify-content: center;
+        flex-wrap: wrap;
+        box-shadow: none;
+        padding: 0px;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .my_pro_dash {
+        padding: 15px;
+    }
+    .my_pro_act_main {
+        padding: 15px;
+    }
+    .mp_pass_ins {
+        display: block;
+    }
+    .my_pro_img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .my_pro_top_act {
+        font-size: 14px;
+    }
+    .m_p_bm_inn p {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+    .my_to_po_meta {
+        gap: 20px;
+    }
+
+    .sum_head {
+        font-size: 12px;
+    }
+    .sum_val {
+        font-size: 14px;
+    }
+    .my_pro_fol_main {
+        display: block;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    .my_pro_fol_main .nav-pills .nav-link {
+        width: 100px;
+        padding: 6px;
+    }
+    .my_pro_fol_main .nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        justify-content: center;
+    }
+    .my_pro_fol_main .fo_la_to {
+        flex-wrap: wrap;
+    }
+    .my_pro_nav_co {
+        display: none;
+    }
+    .mp_cea {
+        display: block;
+    }
+    .noti_it_ma .pub_ow {
+        align-items: flex-start;
+    }
+
+
+    /* =============profile-dashboard-page-style-ends============ */
+
+
+
+
+
+    /* =====================footer-style-starts==================== */
+
+    .footer_logo {
+        margin: 0 auto;
+    }
+
+    .footer_brand_des p {
+        margin: 25px auto;
+        text-align: center;
+    }
+
+    .footer_social {
+        justify-content: center;
+    }
+
+    .footer_header h4 {
+        margin: 0 auto 25px;
+        text-align: center;
+    }
+
+    .in_touch_info>div {
+        justify-content: center;
+    }
+
+    .useful_links {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .newsletter_des p {
+        width: 80%;
+    }
+
+    .footer_copyright_sec {
+        justify-content: center;
+        gap: 12px;
+    }
+
+
+    /* =====================footer-style-ends====================== */
+
+
+
+    /* ======================404-page-style-starts================= */
+
+
+    .img_404 {
+        width: auto;
+    }
+    .heading_404 {
+        font-size: 100px;
+    }
+    .sub_head_404 {
+        font-size: 40px;
+    }
+    .main_404 {
+        padding: 15px;
+    }
+    .main_404_inn {
+        padding: 30px 15px;
+    }
+    .btns_404 {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    /* ======================404-page-style-ends================= */
+
+
+
+
+    /* ======================forum-all-style-starts================= */
+
+    .cat_easy_acc {
+        padding: 8px 12px;
+    }
+    .add_cat a {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+    .fo_na_tr {
+        display: block;
+        width: 30px;
+    }
+    .acc_items {
+        display: none;
+    }
+    .fo_acc_search {
+        display: none;
+    }
+    .fo_na_se {
+        display: block;
+        font-size: 22px;
+    }   
+    .ac_i_sm_nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .acc_items_sm {
+        position: relative;
+        z-index: 20;
+    }
+
+    .acc_items_sm .acc_items {
+        position: absolute;
+        bottom: -285px;
+        background: var(--primary-color);
+        box-shadow: var(--cust-shadow);
+        border-radius: 6px;
+        width: 100%;
+        height: auto;
+        padding: 18px;
+        z-index: 10;
+    }
+
+    .acc_items_sm .acc_items .acc_item {
+        margin-bottom: 16px;
+    }
+    .acc_items_sm .acc_items .active .acc_it_a {
+        width: fit-content;
+    }
+
+    .fo_cat_top h3 {
+        font-size: 20px;
+    }
+    .fo_cat_main,
+    .fo_cat_bot,
+    .fo_side {
+        padding: 16px;
+    }
+    .fo_la_dis {
+        gap: 20px;
+    }
+
+    .fo_new_main .fo_la_to, 
+    .fo_re_main .fo_la_to, 
+    .fo_to_main .fo_la_to {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .fo_new_main .la_meta, 
+    .fo_re_main .la_meta, 
+    .fo_to_main .la_meta {
+        gap: 20px;
+    }
+    
+    .fo_new_main .la_title,
+    .fo_re_main .la_title,
+    .fo_to_main .la_title {
+        font-size: 18px;
+    }
+
+    .forum_dis_main,
+    .fo_ac_replies {
+        padding: 14px;
+    }
+    .fo_pub_o_ti {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .f_ac_b_ml {
+        gap: 14px;
+    }
+
+    /* ======================forum-all-style-ends================= */
+
+
+}
+
+@media only screen and (min-width: 576px) {
+
+
+    /* =====================home-page-style-starts==================== */
+
+
+    /* ----------hero-sec-start----------- */
+
+    .navbar_brand {
+        width: 200px;
+        margin: 0;
+    }
+
+    .sec_hero {
+        min-height: 768px;
+        padding-top: 60px;
+    }
+
+    .hero_main {
+        top: 50px;
+    }
+
+    .hero_heading {
+        font-size: 45px;
+        font-weight: 500;
+    }
+
+    .hero_des {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .hero_img {
+        transform: scale(1.3);
+        right: -22%;
+        top: -80px;
+        width: 100%;
+    }
+
+    .hero_img_1 {
+        bottom: -15%;
+        left: -30%;
+        transform: scale(1.1);
+    }
+
+    /* ----------hero-sec-ends----------- */
+
+
+    /* =====================home-page-style-ends====================== */
+
+
+
+
+    /* =================course-details-style-starts================ */
+
+    .cou_det_her_img {
+        float: none;
+        margin-right: 0px;
+    }
+
+    .cou_det_her_img img {
+        max-width: 100%;
+    }
+
+    .cou_det_her_head {
+        margin-top: 18px;
+    }
+
+    .c_side_col,
+    .c_det_art_col {
+        display: none;
+    }
+
+    .c_cont_sm_menu {
+        display: flex;
+    }
+
+    .c_det_sh_title {
+        text-align: center;
+    }
+
+    .c_det_share {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .c_nav_title {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .c_navs {
+        justify-content: space-between;
+    }
+    .less_description p iframe {
+        height: 350px;
+        
+    }
+
+    /* =================course-details-style-ends================== */
+
+
+    /* ====================blog-det-page-style-starts================ */
+
+    /* ====================blog-det-page-style-ends================== */
+
+
+
+    /* ====================about-page-style-starts================== */
+
+
+    .sec_about {
+        padding: 45px 0;
+    }
+    .about_img {
+        margin: 0 auto 20px;
+    }
+    .ab_c_title {
+        font-size: 45px;
+    }
+    .as_sec_us {
+        padding: 0 0 45px;
+    }
+    .ab_exp {
+        margin-bottom: 25px;
+    }
+
+
+    /* =====================about-page-style-ends=================== */
+
+
+    /* ====================contact-page-style-starts================== */
+
+    .s_cont_des {
+        width: 100%;
+    }
+    .c_map {
+        height: 350px;
+    }
+    .c_newsletter input {
+        width: 50%;
+    }
+
+    /* =====================contact-page-style-ends=================== */
+
+
+
+
+    /* ============profile-dashboard-page-style-starts=========== */
+
+
+    .my_pro_det {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .my_pro_img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .my_pro_act_navs .nav {
+        justify-content: unset;
+        gap: 16px;
+        margin-top: 15px;
+    }
+    .my_pro_fol_main {
+        display: block;
+    }
+    .my_pro_fol_main .nav-pills .nav-link {
+        width: 100px;
+        padding: 6px;
+    }
+    .my_pro_fol_main .nav {
+        /* justify-content: space-between; */
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+    .my_pro_nav_co {
+        display: none;
+    }
+    .mp_cea {
+        display: block;
+    }
+
+
+    /* =============profile-dashboard-page-style-ends============ */
+
+
+
+
+    /* =====================footer-style-starts==================== */
+
+    /* .footer_logo {
+        margin: 0 auto;
+    }
+
+    .footer_brand_des p {
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .footer_social {
+        justify-content: center;
+    }
+
+    .footer_header h4 {
+        margin: 0 auto;
+    } */
+
+    /* .in_touch_info > div {
+        justify-content: center;
+    } */
+
+    .footer_copyright_sec {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* =====================footer-style-ends====================== */
+
+
+    /* ======================forum-all-style-starts================= */
+
+    .cat_easy_acc {
+        padding: 12px;
+    }
+    .fo_na_tr {
+        display: block;
+        width: 30px;
+    }
+    .acc_items {
+        display: none;
+    }
+    .fo_acc_search {
+        display: none;
+    }
+    .fo_na_se {
+        display: block;
+        font-size: 24px;
+    }
+    .ac_i_sm_nav {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .acc_items_sm {
+        position: relative;
+        z-index: 20;
+    }
+    .acc_items_sm .acc_items {
+        position: absolute;
+        bottom: -285px;
+        background: var(--primary-color);
+        box-shadow: var(--cust-shadow);
+        border: 1px solid #c0d3d7;
+        border-radius: 6px;
+        width: 100%;
+        height: auto;
+        padding: 18px;
+        z-index: 10;
+    }
+    .acc_items_sm .acc_items .acc_item {
+        margin-bottom: 16px;
+    }
+    .acc_items_sm .acc_items .active .acc_it_a {
+        width: fit-content;
+    }
+
+    .note-editor.note-frame {
+        width: calc(100% - 32%);
+    }
+
+    /* ======================forum-all-style-ends================= */
+
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+
+    /* =====================home-page-style-starts==================== */
+
+
+    /* ----------hero-sec-start----------- */
+    .hero_img {
+        transform: scale(1);
+    }
+
+    .hero_img_1 {
+        transform: scale(0.9);
+    }
+
+    .hero_shape {
+        transform: scale(0.9);
+    }
+
+    /* ----------hero-sec-ends----------- */
+
+    /* .l_articles_img {
+        height: 235px;
+    } */
+
+    /* .courses_main_img {
+        height: 210px;
+    }
+
+    .courses_main_img a img {
+        height: 100%;
+    } */
+
+
+    /* =====================home-page-style-ends=================== */
+
+
+
+    /* =================course-details-style-starts================ */
+
+    .cou_det_her_img {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .cou_det_her_head {
+        margin-top: 0px;
+    }
+
+    .c_det_sh_title {
+        text-align: left;
+    }
+
+    .c_det_share {
+        justify-content: left;
+        gap: 14px;
+    }
+
+    .c_nav_title {
+        margin-top: 0px;
+        text-align: end;
+    }
+
+    .c_navs {
+        justify-content: flex-end;
+    }
+    .less_description p iframe {
+        height: 400px;
+        
+    }
+    /* =================course-details-style-ends================== */
+
+
+    /* ====================blog-det-page-style-starts================ */
+
+    /* ====================blog-det-page-style-ends================== */
+
+
+
+
+    /* ====================about-page-style-starts================== */
+
+
+    .about_img {
+        width: 70%;
+        margin: 0 auto 20px;
+    }
+    .as_sec_us {
+        padding: 45px 0 60px;
+    }
+    .ab_c_title {
+        font-size: 50px;
+    }
+    .ab_exp {
+        margin-bottom: 0px;
+    }
+
+
+    /* =====================about-page-style-ends=================== */
+
+
+    /* ====================contact-page-style-starts================== */
+
+    .c_map {
+        height: 400px;
+    }
+
+    /* =====================contact-page-style-ends=================== */
+
+
+    /* ============profile-dashboard-page-style-starts=========== */
+
+
+    .my_pro_fol_main {
+        display: flex;
+        gap: 24px;
+    }
+    .my_pro_fol_main .nav {
+        flex-direction: column;
+        gap: 16px;
+        justify-content: unset;
+        margin-bottom: 0px;
+    }
+    .my_pro_fol_main .nav-pills .nav-link {
+        width: 115px;
+        padding: 8px 16px;
+    }
+
+
+    /* =============profile-dashboard-page-style-ends============ */
+
+
+    /* =====================footer-style-starts==================== */
+
+    /* .footer_logo {
+        margin: 0;
+    }
+
+    .footer_brand_des p {
+        margin: 30px 0;
+        text-align: left;
+    }
+
+    .footer_social {
+        justify-content: left;
+    }
+
+    .footer_header h4 {
+        margin: 0;
+    } */
+
+    /* .in_touch_info > div {
+        justify-content: left;
+    } */
+
+    .footer_copyright_sec {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    /* =====================footer-style-ends====================== */
+
+
+    /* ======================forum-all-style-starts================= */
+
+    .cat_easy_acc {
+        padding: 14px;
+    }
+    .fo_acc_search {
+        display: block;
+    }
+    .fo_na_se {
+        display: none;
+    }
+    .fo_na_tr {
+        width: 35px;
+    }
+
+    /* ======================forum-all-style-ends================= */
+
+
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    /* =====================home-page-style-starts==================== */
+
+
+    /* ----------hero-sec-start----------- */
+
+    .navbar_brand {
+        width: 260px;
+    }
+
+    .sec_hero {
+        min-height: 840px;
+        padding: 130px 0;
+    }
+
+    .hero_heading {
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    .hero_des {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .hero_main {
+        top: 0px;
+    }
+
+    .hero_img_1 {
+        position: absolute;
+        left: -30%;
+        bottom: 0;
+        z-index: 2;
+        transform: scale(1);
+    }
+
+    .hero_img {
+        width: auto;
+        right: -15%;
+        top: -65px;
+    }
+
+    .hero_shape {
+        transform: scale(1);
+        top: 50px;
+    }
+
+    /* ----------hero-sec-ends----------- */
+
+
+    /* =====================home-page-style-ends==================== */
+
+
+
+
+    /* =================course-details-style-starts================ */
+
+    .cou_det_her_img img {
+        max-width: 280px;
+    }
+
+    .c_side_col,
+    .c_det_art_col {
+        display: block;
+    }
+
+    .c_cont_sm_menu,
+    .sidenav {
+        display: none;
+    }
+
+    /* =================course-details-style-ends================== */
+
+
+
+    /* ====================blog-det-page-style-starts================ */
+
+    /* ====================blog-det-page-style-ends================== */
+
+
+
+    /* ====================about-page-style-starts================== */
+
+
+    .sec_about {
+        padding: 130px 0 120px;
+    }
+    .sa_2 {
+        padding: 60px 0 120px;
+    }    
+    .about_img {
+        width: 90%; 
+        margin: 0;       
+    }
+    .ai_1 {
+        margin: 0 0 0 auto;
+    }
+
+
+    /* =====================about-page-style-ends=================== */
+
+    /* ====================contact-page-style-starts================== */
+
+    .s_cont_des {
+        width: 75%;
+    }
+    .cont_meta_info_bo {
+        margin-bottom: 50px;
+    }
+    .form_group {
+        margin-bottom: 12px;
+    }
+    .inp_gro_ico {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+    .inp_gro_fo {
+        padding: 8px;
+    }
+    
+    .c_map {
+        height: 100%;
+    }
+
+    /* =====================contact-page-style-ends=================== */
+
+
+    /* ============profile-dashboard-page-style-starts=========== */
+
+
+    .my_pro_det {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .my_pro_img {
+        margin-left: unset;
+        margin-right: unset;
+    }
+    .my_pro_act_navs .nav {
+        justify-content: space-between;
+        gap: 0;
+        margin-top: 0px;
+    }
+    .my_pro_nav_co {
+        display: block;
+    }
+    .mp_cea {
+        display: none;
+    }
+
+
+    /* =============profile-dashboard-page-style-ends============ */
+
+
+    /* =====================footer-style-starts==================== */
+
+
+    .footer_brand_des p {
+        width: 100%;
+    }
+
+
+    /* =====================footer-style-ends====================== */
+
+
+    /* ======================forum-all-style-starts================= */
+
+    .cat_easy_acc {
+        padding: 18px;
+    }
+    .fo_na_tr {
+        display: none;
+    }
+    .acc_items {
+        display: flex;
+    }
+    .acc_items {
+        gap: 10px;
+    } 
+    
+    .acc_items_sm .acc_items {
+        display: none !important;
+    }
+
+    .active .acc_it_a {
+        padding: 6px 10px;
+        border: 1px solid #c0d3d7;
+    }
+
+    /* ======================forum-all-style-ends================= */
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+
+    /* =====================home-page-style-starts==================== */
+
+
+    /* ----------hero-sec-start----------- */
+    .sec_hero {
+        min-height: 880px;
+    }
+
+    .hero_img {
+        width: auto;
+        right: -30%;
+        top: -100px;
+        transform: scale(1.2);
+    }
+
+    .hero_img_1 {
+        left: -30%;
+        bottom: -40px;
+    }
+
+    .hero_shape {
+        transform: scale(1);
+        top: 0px;
+    }
+
+    .hero_heading {
+        font-size: 55px;
+    }
+
+    /* ----------hero-sec-ends----------- */
+
+
+    /* ---------why-us-sec-starts-------- */
+
+    .choose_bottom h4 {
+        width: 100%;
+    }
+
+    /* ---------why-us-sec-ends-------- */
+
+
+    /* =====================home-page-style-ends==================== */
+
+
+
+
+    /* =================course-details-style-starts================ */
+
+    .cou_det_her_img img {
+        max-width: 360px;
+    }
+
+
+    /* =================course-details-style-ends================== */
+
+
+    /* ====================blog-det-page-style-starts================ */
+    /* ====================blog-det-page-style-ends================== */
+
+
+
+    /* ====================about-page-style-starts================== */
+
+
+    .sec_about {
+        padding: 90px 0 120px;
+    }
+    .as_sec_us {
+        padding: 45px 0 90px;
+    }
+    .ab_c_title {
+        font-size: 55px;
+    }
+    .sa_2 {
+        padding: 70px 0 120px;
+    } 
+
+
+    /* =====================about-page-style-ends=================== */
+
+
+    /* ====================contact-page-style-starts================== */
+
+    .form_group {
+        margin-bottom: 18px;
+    }
+    .inp_gro_ico {
+        padding: 8px 12px;
+        font-size: 18px;
+    }
+    .inp_gro_fo {
+        padding: 10px;
+    }
+    .c_newsletter input {
+        width: 35%;
+    }
+
+    /* =====================contact-page-style-ends=================== */
+    
+    
+
+    /* ============profile-dashboard-page-style-starts=========== */
+    /* =============profile-dashboard-page-style-ends============ */
+
+
+
+    /* =====================footer-style-starts==================== */
+
+
+    .footer_brand_des p {
+        width: 90%;
+    }
+
+
+    /* =====================footer-style-ends====================== */
+
+
+    /* ======================forum-all-style-starts================= */
+
+    .acc_items {
+        gap: 50px;
+    }
+    .active .acc_it_a {
+        padding: 8px 12px;
+    }
+
+    /* ======================forum-all-style-ends================= */
+
+
+}
