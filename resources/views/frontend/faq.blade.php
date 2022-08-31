@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-lg-12">
                   
-                    <h3 class="faq_item_header"></h3>
+                    <h3 class="faq_item_header">Basic questions everyone asks</h3>
                   
                     <div class="accordion">   
                        
@@ -18,7 +18,7 @@
                             
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item_1" aria-expanded="true" aria-controls="item_1">
-                                    <span class="acc_it_he">{{ $faqs->question }}</span>
+                                    <span class="acc_it_he">What is forex shikhun ?</span>
                                 </button>
                             </h2>
                             <div id="item_1" class="accordion-collapse collapse show">

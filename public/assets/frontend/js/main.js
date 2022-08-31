@@ -274,15 +274,19 @@ $('.loadmore-two').simpleLoadMore({
 //View More 
 $('.loadmore').simpleLoadMore({
   item: '.load-item',
-  count: 8,
+  count: 12,
   itemsToLoad: 4,
   btnHTML: '<div class="col-12"><div class="load_more_videos"><a href="#" class="cust_btn load-more__btn">View More</a></div></div>'                   
 });
 $('.loadmore-one').simpleLoadMore({
   item: '.load-item-two',
-  count: 8,
+  count: 9,
   itemsToLoad: 4,
   btnHTML: '<div class="col-12"><div class="load_more_videos"><a href="#" class="cust_btn load-more__btn">View More</a></div></div>'
 });
 
+// Share Icon
 
+$('.social').socialLinkBuilder({
+  
+});

@@ -23,7 +23,7 @@
 
 <li class="nav-item">
     <a href="{{ route('Lessons.index') }}" class="nav-link cust_btn {{ Request::is('Lessons*') ? 'active' : '' }}">
-        <i class="nav-icon fa fa-edit c_orange"></i>
+        <i class="nav-icon fa fa-chalkboard c_orange"></i>
         <p> Lessons</p>
     </a>
 </li>
@@ -39,23 +39,29 @@
     <a href="{{ route('subscribes.index') }}" class="nav-link cust_btn {{ Request::is('subscribes*') ? 'active' : '' }}">
         <i class="nav-icon fa fa-bell c_de_re"></i>
         <p>Subscribes
-            <span class="badge badge-danger right">2</span>
+            <?php
+            $subscriberall = DB::table('subscribe')->count(); 
+            ?>
+            <span class="badge badge-danger right">{{ $subscriberall}}</span>
         </p>
     </a>
 </li>
 
-<li class="nav-item">
+{{-- <li class="nav-item">
     <a href="{{ route('abouts.index') }}"class="nav-link cust_btn {{ Request::is('abouts*') ? 'active' : '' }}">
         <i class="nav-icon fa fa-address-card c_pg_book"></i>
         <p>Abouts</p>
     </a>
-</li>
+</li> --}}
 
 <li class="nav-item">
     <a href="{{ route('quotes.index') }}" class="nav-link cust_btn {{ Request::is('quotes*') ? 'active' : '' }}">
-        <i class="nav-icon fa fa-edit c_pink"></i>
+        <i class="nav-icon fa fa-comment c_pink"></i>
         <p>Quotes
-            {{-- <span class="badge badge-info right">6</span> --}}
+            <?php
+            $quoteall = DB::table('quote')->count(); 
+            ?>
+            {{-- <span class="badge bg-dark right ">{{  $quoteall }}</span> --}}
         </p>
     </a>
 </li>
@@ -64,7 +70,7 @@
     <a href="{{ route('faqcats.index') }}"><i class="fa fa-edit"></i><span>Faqcats</span></a>
 </li> --}}
 
-<li class="nav-item menu-open">
+{{-- <li class="nav-item menu-open">
     <a href="#" class="nav-link cust_btn  {{ Request::is('faqcats* && faqs*') ? 'active' : '' }}">
         <i class="nav-icon fas fa-question"></i>
         <p>
@@ -87,9 +93,20 @@
           </a>
         </li>
     </ul>
-</li>
+</li> --}}
 
 {{-- <li class="{{ Request::is('faqs*') ? 'active' : '' }}">
     <a href="{{ route('faqs.index') }}"><i class="fa fa-edit"></i><span>Faqs</span></a>
 </li> --}}
+<li class="nav-item">
+    <a href="{{ route('users') }}" class="nav-link cust_btn {{ Request::is('users*') ? 'active' : '' }}">
+       <i class="nav-icon fas fa-user-plus text-dark"></i>
+        <p>Register
+            <?php
+            $user = DB::table('users')->count(); 
+            ?>
+            <span class="badge bg-dark right ">{{  $user }}</span>
+        </p>
+    </a>
+</li>
 

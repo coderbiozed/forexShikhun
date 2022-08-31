@@ -8,7 +8,9 @@ if ($routeName == "blog-details") {
     $slug = str_replace('blog/', '', $currentURL);
     $blog = DB::table('table_blog')->Where('slug',  $slug)->first();
     $image = asset('images/' . json_decode($blog->image)[0]);
+   
 } 
+
 ?>
     <section class="sec_blog_det spt_cust sec_default">
        <div class="container">
@@ -41,25 +43,24 @@ if ($routeName == "blog-details") {
                             <div class="b_meta"><a href="#sc_p_c"><span class="far fa-comment c_dark_cy"></span><span>15 comments</span></a></div> 
                             <div class="b_meta">
                                 <div class="bt_sha_tog_main">
-                                    <span class="fas fa-share c_violet c_pointer"></span>
-                                    <span class="bt_sha_tog_con">
-                                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                                        <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                                    </span>
-                                </div>
-                                <span>Share</span>
+                                   <div class="d-flex">
+                                    <span class=" c_violet c_pointer"></span>
+                                    <div class="social  d-flex">
+                                            {{-- Social Icon --}}
+                                    </div>  
+                                    </div>                        
+                                </div>                          
                             </div>                                               
                         </div>                    
                         <div class="b_det_img">
                             <img src="{{ asset('images/' . json_decode($blog->image)[0]) }}" alt="">
                         </div>
-                        <div class="description-icon">
-                            <p class="b_det_des">{!! $blog->description !!}</p>   
+                        <div class="blog_description">
+                            <div class="description-icon less_description">
+                                <p class="b_det_des ">{!! $blog->description !!}</p>   
+                            </div>
                         </div>
-                    
-                       
+
                      
                         <div class="post_navs">
                         @if(!empty($previous))
@@ -72,8 +73,12 @@ if ($routeName == "blog-details") {
                         </div>
                         {{-- comment Strat --}}
                         <hr class="c_divider">
-                        <div class="b_det_p_co_sec" id="sc_p_c">                           
-                            <h2 class="b_det_p_co_title">See all comments <span class="b_det_p_co_count">06</span></h2>
+                        <div class="b_det_p_co_sec" id="sc_p_c">     
+                            <?php
+                                $commentall = DB::table('comments')->count(); 
+                                ?>                      
+                            <h2 class="b_det_p_co_title">See all comments <span class="b_det_p_co_count">{{$commentall}}</span></h2>
+                          @foreach ($comment as $comment)
                             <div class="b_det_com_main">
                                 <div class="b_det_com">
                                     <div class="sign_user">
@@ -83,8 +88,8 @@ if ($routeName == "blog-details") {
                                     </div>
                                     <div class="b_det_com_bo">
                                         <div class="b_det_com_cont">
-                                            <span class="b_det_com_au">Mark Kyle</span>
-                                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non inventore ipsa fuga distinctio quidem doloribus.</span>
+                                            <span class="b_det_com_au">{{ $comment->name }}</span>
+                                            <span>{{ $comment->comment}}</span>
                                         </div>
                                         <div class="b_det_com_bo_meta">                                            
                                             <a href="#" class="bo_meta bo_meta_like"><span class="far fa-heart c_pink"></span><span>5</span></a>
@@ -105,7 +110,7 @@ if ($routeName == "blog-details") {
                                                 <div class="card card-body">
                                                     <form action="#" class="b_det_com_fo">
                                                         <div class="sign_user">
-                                                            <a href="#" title="Mahmud Shejan">
+                                                            <a href="#" title="Mahmud Shejan" data-Commentid ="{{$comment->id}}">
                                                                 <span class="sign_user_img"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt="img"></span>                            
                                                             </a>
                                                         </div>
@@ -214,8 +219,9 @@ if ($routeName == "blog-details") {
                                         </div>
                                     </div>
                                 </div>                               
-                            </div>                           
-                            <div class="b_det_com_main">
+                            </div>  
+                            @endforeach
+                            {{-- <div class="b_det_com_main">
                                 <div class="b_det_com">
                                     <div class="sign_user">
                                         <a href="#" title="Corey Scott">
@@ -357,17 +363,19 @@ if ($routeName == "blog-details") {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <h2 class="b_det_c_ti_main">Leave a comment!</h2>
-                            <form action="#" class="b_det_com_fo">
+                            <form action="{{url('add_comment')}}" class="b_det_com_fo" method="POST">
+                                @csrf
                                 <div class="sign_user">
                                     <a href="#" title="Mahmud Shejan">
                                         <span class="sign_user_img"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt="img"></span>                            
                                     </a>
                                 </div>
+                               
                                 <div class="b_det_com_t_main">
-                                    <textarea name="" id="" class="b_det_us_com" placeholder="comment.."></textarea>
-                                    <button class="b_det_com_sh">➤</button>
+                                    <textarea name="comment" id="" class="b_det_us_com" placeholder="comment.."></textarea>
+                                    <button class="b_det_com_sh" type="submit" value="Comment" >➤</button>
                                 </div>                               
                             </form>                                                                                                                            
                         </div>
@@ -390,10 +398,18 @@ if ($routeName == "blog-details") {
                         <div class="b_det_si_new">
                                 <h3>Get our latest news daily!</h3>
                                 <p>Daily we will send you the breaking newses right to your inbox!</p>
-                                <form action="#" class="b_det_si_for">
+                                {{-- <form action="#" class="">
                                     <input type="email" name="email" id="email" placeholder="email">
                                     <input type="submit" value="Subscribe" class="cust_btn"></input>
-                                </form>
+                                </form> --}}
+                                {!! Form::open(['route' => 'subscribes.store']) !!}
+                                <div class="b_det_si_for">
+                                    
+                                     @csrf
+                                     <input type="email" name="email" id="email" placeholder="email" class="cust_new">
+                                     {!! Form::submit('Subscribe', ['class' => 'cust_btn']) !!}  
+                                </div>
+                                {!! Form::close() !!}
                         </div> 
                         <div class="b_det_si_pa">
                             <h3 class="m_b">Latest Articles</h3>

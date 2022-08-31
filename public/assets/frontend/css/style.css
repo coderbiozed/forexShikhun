@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Square+Peg&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -133,6 +133,7 @@ input {
 }
 
 
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -165,6 +166,17 @@ input {
 
 /* ---btn-css-start--- */
 
+.cust_new{
+    border-radius: 6px;
+    background: var(--primary-color);
+    color: var(--font-color);
+    box-shadow: var(--cust-shadow);
+    width: fit-content;
+    color: var(--light-gray);
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #c0d3d7;
+}
 .cust_btn {
     padding: 8px 16px;
     border-radius: 6px;
@@ -1685,12 +1697,20 @@ hr.articles_divider {
 .less_description iframe::before{
     text-align: center;
 }
+.less_description  iframe{
+    height:auto;
+    width:80%;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
 .less_description p iframe{
     height:400px;
     width:80%;
     display: block !important;
     margin: 0 auto !important;
 }
+
 .less_description li::before{
     content: "➜";
     position: absolute;
@@ -1706,6 +1726,12 @@ hr.articles_divider {
 }
 .less_description img{
     max-width: 400px;
+    margin: 25px auto;
+    display: block !important;
+}
+.blog_description .less_description img{
+    height: auto !important;
+    width: 100% !important;
     margin: 25px auto;
     display: block !important;
 }
@@ -4214,7 +4240,19 @@ hr.articles_divider {
 }
 
 
-/* ---forum-category-discussion-details-end--- */
+/* 👌👌👌👌👌👌💖💖💖💖j query Social Icon👌👌👌👌👌👌💖💖💖💖 */
+.social svg {
+    width: 50px;
+    height: 30px;
+    margin: 0 10px;
+    padding: 4px 12px;
+    font-size: 20px;
+    border-radius: 4px;
+    background: var(--primary-color);
+    box-shadow: var(--cust-shadow);
+    transition: .4s;
+    color: red;
+    border: 1px solid #c0d3d7;
+}
 
-
-/* ======================forum-all-style-ends================= */
+/* ======================j query Social Icon================= */

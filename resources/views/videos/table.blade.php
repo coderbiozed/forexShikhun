@@ -2,9 +2,9 @@
     <table class="table" id="videos-table">
         <thead>
         <tr>
-            <th>Title</th>
-        <th>Video</th>
-            <th colspan="3">Action</th>
+            <th  class="c_dark_cy">Title</th>
+        <th  class="c_dark_cy">Video</th>
+            <th colspan="3"  class="c_dark_cy">Action</th>
         </tr>
         </thead>
         <tbody>

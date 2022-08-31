@@ -8,6 +8,7 @@ use App\Repositories\FaqsRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use App\Models\Faqcat;
+use App\Models\Faqs;
 use Flash;
 use Response;
 
@@ -60,6 +61,7 @@ class FaqsController extends AppBaseController
         $input = $request->all();
 
         $faqs = $this->faqsRepository->create($input);
+     
 
         Flash::success('Faqs saved successfully.');
 

@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateSubscribeRequest;
 use App\Repositories\SubscribeRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+
 use DB;
 use Flash;
 use Response;
@@ -42,9 +43,11 @@ class SubscribeController extends AppBaseController
      *
      * @return Response
      */
+
     public function create()
     {
         return view('subscribes.create');
+        
     }
 
     /**
@@ -60,7 +63,7 @@ class SubscribeController extends AppBaseController
 
         $subscribe = $this->subscribeRepository->create($input);
 
-        Flash::success('Subscribe saved successfully.');
+        Flash::success('<h4> Subscribe saved successfully.</h4>');
 
         return redirect()->back();
     }

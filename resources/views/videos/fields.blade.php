@@ -5,7 +5,7 @@
     <div class="badge bg-danger">
       Must Use between 35 to 40 character
     </div>
-    {!! Form::text('title', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::text('title', null, ['class' => 'form-control','minlength' => 35,'maxlength' => 45]) !!}
   
 </div>
 

@@ -5,10 +5,10 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Quote Details</h1>
+                    <h1 class="c_pink">Quote Details</h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-default float-right"
+                    <a class="btn b_c_pink text-light float-right"
                        href="{{ route('quotes.index') }}">
                         Back
                     </a>

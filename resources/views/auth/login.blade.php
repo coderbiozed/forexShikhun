@@ -18,14 +18,14 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
+        <h6 class="text-center p-3 login_heading  animate-charcter c_f-family" >Forex Shikhun</h6>
     </div>
     <!-- /.login-logo -->
 
     <!-- /.login-box-body -->
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg login_heading">Admin Login</p>
 
             <form method="post" action="{{ url('/login') }}">
                 @csrf
@@ -37,7 +37,7 @@
                            placeholder="Email"
                            class="form-control @error('email') is-invalid @enderror">
                     <div class="input-group-append">
-                        <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                        <div class="input-group-text"><span class="fas fa-envelope text-orange"></span></div>
                     </div>
                     @error('email')
                     <span class="error invalid-feedback">{{ $message }}</span>
@@ -51,7 +51,7 @@
                            class="form-control @error('password') is-invalid @enderror">
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
+                            <span class="fas fa-lock text-info"></span>
                         </div>
                     </div>
                     @error('password')

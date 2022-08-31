@@ -1,4 +1,4 @@
-@extends('layouts.frontend')
+{{-- @extends('layouts.frontend')
 @section('content')
 
     <section class="my_pro_dash_sec spt_cust sec_default">
@@ -860,4 +860,4 @@
     </section>
 
 
-    @endsection
+    @endsection --}}

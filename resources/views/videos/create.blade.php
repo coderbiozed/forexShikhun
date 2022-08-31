@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Create Videos</h1>
+                    <h1 class="c_dark_cy">Create Videos</h1>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Save', ['class' => 'btn b_c_dark_cy text-light' ]) !!}
                 <a href="{{ route('videos.index') }}" class="btn btn-default">Cancel</a>
             </div>
 

@@ -5,10 +5,10 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Blogs</h1>
+                    <h1 class="c_violet">All Blogs</h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-primary float-right"
+                    <a class="btn bg-purple float-right "
                        href="{{ route('blogs.create') }}">
                         Add New
                     </a>

@@ -1,23 +1,23 @@
 <!-- Author Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-6" id="blogs">
     {!! Form::label('author', 'Author:') !!}
     {!! Form::text('author', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Title Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-6" id="blogs">
     {!! Form::label('title', 'Title:') !!}
     {!! Form::text('title', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Description Field -->
-<div class="form-group col-sm-12 col-lg-12" >
+<div class="form-group col-sm-12 col-lg-12" id="blogs" >
     {!! Form::label('description', 'Description:') !!}
     {!! Form::textarea('description', null, ['class' => ' ckeditor form-control' ,]) !!}
 </div>
 
 <!-- Image Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-6" id="blogs">
 
     @csrf
             @if ($message = Session::get('success'))
@@ -40,7 +40,7 @@
                 <div class="imgPreview"> </div>
             </div>            
 
-            <div class="custom-file">
+            <div class="custom-file" id="blogs">
                 <input type="file" name="imageFile[]" class="custom-file-input" id="images" multiple="multiple">
                 <label class="custom-file-label" for="images">Choose image (Size: 1000x600)</label>
             </div>
@@ -48,7 +48,7 @@
 
 
 <!-- Slug Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-6" id="blogs">
     {!! Form::label('slug', 'Slug:') !!}
     {!! Form::text('slug', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>

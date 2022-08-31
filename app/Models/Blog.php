@@ -21,6 +21,7 @@ class Blog extends Model
     
 
     use HasFactory;
+    
 
     public $table = 'table_blog';
     
@@ -69,5 +70,6 @@ class Blog extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+   
+   
 }

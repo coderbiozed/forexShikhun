@@ -2,9 +2,9 @@
     <table class="table" id="subscribes-table">
         <thead>
         <tr>
-            <th>Email</th>
-        <th>Email Verified At</th>
-            <th colspan="3">Action</th>
+            <th class="c_de_re">Email</th>
+        <th class="c_de_re">Email Verified At</th>
+            <th colspan="3" class="c_de_re">Action</th>
         </tr>
         </thead>
         <tbody>

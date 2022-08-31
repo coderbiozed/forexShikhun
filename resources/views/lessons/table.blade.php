@@ -3,14 +3,14 @@
         <table class="table" id="Lessons-table">
             <thead>
             <tr>
-                <th>Course Name</th>
-            <th>Lesson No</th>
-            <th>Title</th>
-            <th>Slug</th>
-            <th>Short Description</th>
-            <th>Description</th>
+                <th class="c_orange">Course Name</th>
+            <th class="c_orange">Lesson No</th>
+            <th class="c_orange">Title</th>
+            <th class="c_orange">Slug</th>
+            <th class="c_orange">Short Description</th>
+            <th class="c_orange">Description</th>
             
-                <th colspan="3">Action</th>
+                <th colspan="3" class="c_orange">Action</th>
             </tr>
             </thead>
             <tbody>

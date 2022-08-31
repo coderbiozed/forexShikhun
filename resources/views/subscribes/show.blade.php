@@ -5,10 +5,10 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Subscribe Details</h1>
+                    <h1 class="c_de_re">Subscribe Details</h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-default float-right"
+                    <a class="btn b_c_de_re text-light float-right"
                        href="{{ route('subscribes.index') }}">
                         Back
                     </a>

@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
+    <section class="content-header" id="course">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Courses</h1>
+                    <h1 class="c_green">Courses</h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-primary float-right"
+                    <a class="btn bg-c_green float-right text-white"
                        href="{{ route('courses.create') }}">
                         Add New
                     </a>

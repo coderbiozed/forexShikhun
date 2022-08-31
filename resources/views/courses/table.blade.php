@@ -2,18 +2,18 @@
     <table class="table table-strip" id="courses-table">
         <thead>
         <tr>
-            <th>Course Title</th>
-            <th>Course Slug</th>
+            <th class="c_green">Course Title</th>
+            <th class="c_green">Course Slug</th>
             {{-- <th>Total Lesson</th> --}}
-            <th>Rating</th>
-            <th>Image</th>
-            <th>Course Description</th>
-            <th>Who is this course for ?</th>
-            <th>What you will learn ?</th>
+            <th class="c_green">Rating</th>
+            <th class="c_green">Image</th>
+            <th class="c_green">Course Description</th>
+            <th class="c_green">Who will learn ?</th>
+            <th class="c_green">What you will learn ?</th>
             {{-- <th>Lesson Title</th>
             <th>Lesson Slug</th>
             <th>Lesson Description</th> --}}
-            <th colspan="3">Action</th>
+            <th colspan="3" class="c_green">Action</th>
         </tr>
         </thead>
         <tbody>

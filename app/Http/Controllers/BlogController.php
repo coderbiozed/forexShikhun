@@ -94,7 +94,11 @@ class BlogController extends AppBaseController
     public function show($id)
     {
          $blog = $this->blogRepository->find($id);
+
+               
+                    
         //$blog = DB::table('table_blog')->find($id);
+
 
         if (empty($blog)) {
             Flash::error('Blog not found');

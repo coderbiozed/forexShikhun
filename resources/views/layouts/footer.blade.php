@@ -1,3 +1,4 @@
+
 <section class="sec_footer">
         <div class="container">
             <div class="row">
@@ -87,6 +88,7 @@
                 <div class="col-12">
                     <hr class="ft_divider">
                     <div class="footer_header newsletter_hed">
+                        
                         <h4>Subscribe Our Newsletter !</h4>
                     </div>
                     <div class="newsletter_des">
@@ -95,15 +97,35 @@
                            Subscribe to our newsletter and gain the UPPER hand. </p>
                     </div>
                     <div class="sub_newsletter">
-                       
+                       @if($errors->any())
+                       @foreach($errors->all as $error)
+                       <div class="alert alert-danger">
+                        {{ $error }}
+                       </div>
+                       @endforeach
+                       @endif
+
+
                         {!! Form::open(['route' => 'subscribes.store']) !!}
 
                          @csrf
+                         @if($errors->any())
+                         @foreach($errors->all as $error)
+                         <div class="alert alert-danger">
+                          {{ $error }}
+                         </div>
+                         @endforeach
+                         @endif
                             <div class="sub_news_form">                          
-                                <input type="text" placeholder="email" name="email">
+                                <input type="text" placeholder="email" name="email" value="{{ old('email') }}" class="@error('email') is-invalid @enderror">
+                                @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                                 {!! Form::submit('Subscribe', ['class' => 'cust_btn']) !!}                                               
                             </div>      
-
+                            
                         {!! Form::close() !!}
                     </div>
                 </div>
@@ -136,18 +158,24 @@
 
 
 
-
+   
     <script src="{{asset('assets/frontend/js/bootstrap.min.js')}}"></script>   
      <script src="{{asset('assets/frontend/js/jquery.slim.min.js')}}"></script>
+
     <!-- jquery.simpleLoadMore.min  -->
     <script src="{{asset('assets/frontend/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('assets/frontend/js/jquery.simpleLoadMore.min.js')}}"></script>
+    {{-- social --}}
+    <script src="{{asset('assets/frontend/js/socialLinkBuilder.js')}}"></script>
+    
+   
+
     <script src="{{asset('assets/frontend/js/jquery.mousewheel.min.js')}}"></script>
     <script src="{{asset('assets/frontend/js/owl.carousel.min.js')}}"></script>     
     <script src="{{asset('assets/frontend/js/main.js')}}"></script>
-    
-    
 
+  
+    
     <script>
         $(function () {
           $("#example1").DataTable({
@@ -165,6 +193,7 @@
           });
         });
       </script>
+
 </body>
 
 </html>

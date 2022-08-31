@@ -2,12 +2,12 @@
     <table class="table" id="blogs-table">
         <thead>
             <tr>
-                <th>Author</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Publish Date</th>
-                <th colspan="3">Action</th>
+                <th class="c_violet">Author</th>
+                <th class="c_violet">Title</th>
+                <th class="c_violet">Description</th>
+                <th class="c_violet">Image</th>
+                <th class="c_violet">Pub: Date</th>
+                <th colspan="3" class="c_violet">Action</th>
             </tr>
         </thead>
         <tbody>

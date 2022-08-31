@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Subscribes 
+                    <h1 class="c_de_re">Subscribes 
                         <?php $subscriberall = DB::table('subscribe')->count(); ?>
                         <span class="sub_count">
                             {{ $subscriberall }}
@@ -14,7 +14,7 @@
                     
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-primary float-right"
+                    <a class="btn b_c_de_re text-light float-right"
                        href="{{ route('subscribes.create') }}">
                         Add New
                     </a>

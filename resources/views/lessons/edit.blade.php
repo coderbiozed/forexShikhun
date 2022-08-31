@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Edit  Lesson</h1>
+                    <h1 class="c_orange">Edit  Lesson</h1>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Save', ['class' => 'btn b_orange float-right text-light']) !!}
                 <a href="{{ route('Lessons.index') }}" class="btn btn-default">Cancel</a>
             </div>
 

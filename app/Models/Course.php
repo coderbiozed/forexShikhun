@@ -80,15 +80,14 @@ class Course extends Model
     public static $rules = [
         'course_title'=> 'required|string|max:255',
         'course_slug' => 'required|string|max:255',
-        'lesson_no' => 'required|string|max:255',
         'rating' => 'required|string|max:255',
         'image' => 'string|max:255',
         'course_des' => 'nullable|string',
         'who_learn' => 'nullable|string',
         'what_learn' => 'nullable|string',
-        'lesson_title' => 'required|string|max:255',
-        'lesson_slug' => 'required|string|max:255',
-        'lesson_des' => 'required|string',
+        'lesson_title' => 'string|max:255',
+        'lesson_slug' => 'string|max:255',
+        'lesson_des' => 'string',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];

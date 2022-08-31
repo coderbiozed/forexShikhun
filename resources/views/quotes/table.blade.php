@@ -2,10 +2,10 @@
     <table class="table" id="quotes-table">
         <thead>
         <tr>
-            <th>Author Name</th>
-        <th>Quate Des</th>
-        <th>Author Title</th>
-            <th colspan="3">Action</th>
+            <th class="c_pink">Author Name</th>
+        <th class="c_pink">Quate Des</th>
+        <th class="c_pink">Author Title</th>
+            <th colspan="3" class="c_pink">Action</th>
         </tr>
         </thead>
         <tbody>
