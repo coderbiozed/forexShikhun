@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table" id="blogs-table">
+    <table class="table" id="myDataTable">
         <thead>
             <tr>
                 <th class="c_violet">Author</th>

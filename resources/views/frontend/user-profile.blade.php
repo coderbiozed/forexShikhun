@@ -52,7 +52,7 @@
                                         <p>Title: <span class="c_blue">Senior</span></p>
                                     </div>
                                 </div>                               
-                                <div class="my_pro_top_act">
+                                {{-- <div class="my_pro_top_act">
                                     <h4 class="m-0">Most activities</h4>
                                     <div class="row">
                                         <div class="col-md-6">
@@ -124,8 +124,9 @@
                                             </div>
                                         </div>
                                     </div>  
-                                </div>
+                                </div> --}}
                             </div>
+                            
                         </div>
                         <div class="my_pro_act_main">
                             <div class="my_pro_act_navs">   

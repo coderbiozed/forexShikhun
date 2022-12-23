@@ -18,6 +18,7 @@
 
 <!-- Image Field -->
 <div class="form-group col-sm-6" id="blogs">
+    {!! Form::label('image', 'Image:') !!}
 
     @csrf
             @if ($message = Session::get('success'))

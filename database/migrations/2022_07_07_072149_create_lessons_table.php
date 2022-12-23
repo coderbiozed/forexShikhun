@@ -25,6 +25,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('course_id')->references('id')->on('course');
+            
         });
     }
 

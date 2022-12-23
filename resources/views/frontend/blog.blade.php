@@ -17,15 +17,45 @@
                             <p class="l_articles_cont_des">{!! Str::limit(strip_tags($blog->description), 50) !!}</p>
                             <hr class="articles_divider">    
                             <div class="l_articles_bottom_cont">
-                                <!-- <div class="bottom_cont_parts"><a href="#"><span class="far fa-heart c_pink"></span></a><span>9.5k</span></div>
-                                <div class="bottom_cont_parts"><span class="far fa-eye c_blue"></span><span>24.5k</span></div>-->
-                                <div class="bottom_cont_parts"><a href="#"><span class="fas fa-share c_violet"></span></a><span>Share</span></div> 
+                                <div class="bottom_cont_parts"><span class="far fa-eye c_blue"></span><span>0</span></div>
+                                 {{--🥰🥰 Like view and count 🥰🥰 --}}
+                                @php $likes = DB::table('blog_member')->where('member_id', $blog->id)->count();@endphp
+                               <div class="bottom_cont_parts"><a href="#"><span class="fa-solid fa-heart c_pink"></span></a><span>{{$likes}}</span></div>
+                              
+                               {{--👉👇 {{$blog->likedMembers->count()}} --}}
+                                 {{--🥰🥰 Like view and count 🥰🥰 --}}
+                                
+                                <div class="bottom_cont_parts">
+                                    <a href="#collapseExample"
+                                    onclick="replay(this)"
+                                    class="share_blog"
+                                    dataBlogId="{{ $blog->id }}"
+                                    aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    <span class="fas fa-share c_violet"></span>                                
+                                   </a><span>Share</span>
+                                </div>
+                                
+                                {{-- <div class="bottom_cont_parts"><a href="#"><span class="fas fa-share c_violet"></span></a><span>Share</span></div>  --}}
                                 <div class="bottom_cont_parts"><span class="far fa-clock c_orange"></span><span>{{ \Carbon\Carbon::parse($blog->created_at)->diffForHumans( )   }}</span></div>                            
                             </div> 
                         </div>
                     </div>
                 </div>
                 @endforeach
+                    {{-- sharebutton --}}
+                    <div class="b_meta" style="display:none;">
+                        <input type="hidden" id="blogId" name="blogId" value="{{isset($blog->id)}}">
+                        <div class="bt_sha_tog_main shareDiv" style="position: relative;">
+                            <span class="bt_sha_tog_co" style="display:none; position:absolute">
+                                <div class="social d-flex" id="blog-social">
+                                        {{-- Social Icon --}}
+                                </div> 
+                            </span>                    
+                        </div>                     
+                    </div>
+
+
            <!-- Load More Button -->
             </div>
         </div>
@@ -40,4 +70,12 @@
             <img src="{{asset('assets/frontend')}}/images/homepage/de-shape-3.png" alt="image" class="art_shp_8">
         </div>
     </section>
+
+    <script type="text/javascript">
+        function replay(caller){
+            document.getElementById('blogId').value=$(caller).attr('dataBlogId');
+                $('.shareDiv').insertAfter($(caller));
+                $('.shareDiv').show();
+        }
+    </script>
   @endsection

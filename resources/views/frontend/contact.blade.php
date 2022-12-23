@@ -60,10 +60,42 @@
                                     <div class="col-lg-6">
                                         <div class="c_sub_newsletter">
                                             <h4>Subscribe us!</h4>
-                                            <form action="#" class="c_newsletter">
+                                            {{-- <form action="#" class="c_newsletter">
                                                 <input type="text" placeholder="email">
                                                 <button class="cust_btn">Suscribe</button>
-                                            </form>
+                                            </form> --}}
+                                            <div class="sub_newsletter">
+                                                @if($errors->any())
+                                                @foreach($errors->all as $error)
+                                                <div class="alert alert-danger">
+                                                 {{ $error }}
+                                                </div>
+                                                @endforeach
+                                                @endif
+                         
+                         
+                                                 {!! Form::open(['route' => 'subscribes.store']) !!}
+                         
+                                                  @csrf
+                                                  @if($errors->any())
+                                                  @foreach($errors->all as $error)
+                                                  <div class="alert alert-danger">
+                                                   {{ $error }}
+                                                  </div>
+                                                  @endforeach
+                                                  @endif
+                                                     <div class="sub_news_form">                          
+                                                         <input type="text" placeholder="email" name="email" value="{{ old('email') }}" class="@error('email') is-invalid @enderror">
+                                                         @error('email')
+                                                     <span class="invalid-feedback" role="alert">
+                                                         <strong>{{ $message }}</strong>
+                                                     </span>
+                                                     @enderror
+                                                         {!! Form::submit('Subscribe', ['class' => 'cust_btn']) !!}                                               
+                                                     </div>      
+                                                     
+                                                 {!! Form::close() !!}
+                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">

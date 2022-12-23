@@ -1,4 +1,6 @@
-
+<section class="sc_top_btn">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+</section>
 <section class="sec_footer">
         <div class="container">
             <div class="row">
@@ -138,7 +140,7 @@
                         </div>
                         <div class="footer_copy_useful_link">
                             <a href="{{route('terms')}}">Terms & Conditions</a>
-                            <a href="help-support.html">Help & Support</a>                           
+                            <a href="#">Help & Support</a>                           
                         </div>
                     </div>
                 </div>
@@ -157,8 +159,8 @@
     </section>
 
 
-
-   
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js"></script>
     <script src="{{asset('assets/frontend/js/bootstrap.min.js')}}"></script>   
      <script src="{{asset('assets/frontend/js/jquery.slim.min.js')}}"></script>
 
@@ -167,8 +169,16 @@
     <script src="{{asset('assets/frontend/js/jquery.simpleLoadMore.min.js')}}"></script>
     {{-- social --}}
     <script src="{{asset('assets/frontend/js/socialLinkBuilder.js')}}"></script>
-    
-   
+    <!-- CK editor start -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+   <!-- CK editor end -->
 
     <script src="{{asset('assets/frontend/js/jquery.mousewheel.min.js')}}"></script>
     <script src="{{asset('assets/frontend/js/owl.carousel.min.js')}}"></script>     
@@ -176,23 +186,7 @@
 
   
     
-    <script>
-        $(function () {
-          $("#example1").DataTable({
-            "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-          $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-          });
-        });
-      </script>
+   
 
 </body>
 

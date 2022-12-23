@@ -11,7 +11,11 @@
                         <div class="my_pro_det">
                             <div class="my_pro_lm">
                                 <div class="my_pro_img">
-                                    <span class="my_pro_i_inn"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt="img"></span>
+                                    <span class="my_pro_i_inn">
+                                       
+                                        <img src="images/alluser/<?=json_decode((Auth::guard('member'))->user()->image)[0]?>"  alt="img">
+                                       
+                                    </span>
                                 </div>
                                 <div class="m_p_lo">
                                     <span class="fas fa-map-marker-alt c_blue"></span><span>Khulna, Bangladesh</span>
@@ -27,7 +31,6 @@
                                 </div>
                                 <div class="m_p_lo">
                                     <div class="cust_btn">
-                                        
                                         <form action="">
                                             @csrf
                                             <span class="fas fa-sign-out-alt "></span><span class="u_p"> <a href="{{ url('member-logout')}}">
@@ -41,24 +44,36 @@
                             <div class="my_pro_meta">
                                 <div>
                                    @if (Auth::guard('member'))
-                                    <h4><span>{{ (Auth::guard('member'))->user()->name}} </span><span class="c_blue n_d">||</span><span class="my_pro_nic">{{ (Auth::guard('member'))->user()->username}}  </span></h4>
+                                    <h4><span>{{ (Auth::guard('member'))->user()->name}} </span><span class="c_blue n_d">||</span><span class="my_pro_nic"><span>@</span>{{ (Auth::guard('member'))->user()->username}}  </span></h4>
                                     <p>{{ (Auth::guard('member'))->user()->about}} 
                                     </p>  
                                     @endif                              
                                 </div>
                                 <div class="m_p_meta_bo">                                   
                                     <div class="m_p_bm_inn">
-                                        <p>Total Posts: <span class="c_blue">25</span></p>                                      
+                                        <p>Total Posts: <span class="c_blue">0</span></p>                                      
                                     </div>
                                     <div class="m_p_bm_inn">
-                                        <p>Posts Likes: <span class="c_blue">51</span></p>
+                                        <p>Posts Likes: <span class="c_blue">0</span></p>
                                     </div>
                                     <div class="m_p_bm_inn">
-                                        <p>Profile Views: <span class="c_blue">13</span></p>
+                                        <p>Profile Views: <span class="c_blue">0</span></p>
                                     </div>
                                     <div class="m_p_bm_inn">
-                                        <p>Title: <span class="c_blue">Senior</span></p>
-                                    </div>
+                                        <p>Title: <span class="c_blue">{{(Auth::guard('member')->user()->user_title)}}</span></p>
+                                    </div> 
+                                    <div class="cust_btn">
+                                        <span class="fa-solid fa-key">
+                                        </span><span class="u_p"> 
+                                        <a href="{{route('changepassword')}}">Change password</a>                                    
+                                        </span>
+                                    </div> 
+                                    {{-- <div class="m_p_bm_inn pro_sc_plats">
+                                        <p><a href="#" class="pro_sc_plat" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></p>
+                                        <p><a href="#" class="pro_sc_plat" target="_blank" title="Linked-in"><i class="fab fa-linkedin-in"></i></a></p>
+                                        <p><a href="#" class="pro_sc_plat" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></p>
+                                        <p><a href="#" class="pro_sc_plat" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></p>
+                                    </div>  --}}
                                 </div>                               
                                 <div class="my_pro_top_act">
                                     <h4 class="m-0">Most activities</h4>
@@ -133,6 +148,12 @@
                                         </div>
                                     </div>  
                                 </div>
+                                <div class="my_pro_lm">
+                                    
+                                        
+                                   
+                                    
+                                </div>
                             </div>
                         </div>
                         <div class="my_pro_act_main">
@@ -169,16 +190,22 @@
                                     <div class="tab-pane fade show active" id="pro_pre" role="tabpanel" aria-labelledby="pro_pre-tab">
                                         <div class="my_prof_items">
                                            
-                                            <form action="" class="my_pro_it_fo">
+                                            <form action="{{ route('updatePreferences') }}" class="my_pro_it_fo" method="POST" enctype="multipart/form-data">
+                                                @csrf
                                                 @if (Auth::guard('member'))
-                                                <div class="row">
+                                                @if (session('status'))                               
+                                                        <div class="alert alert-success" role="alert">
+                                                            {{ session('status')}}
+                                                        </div>
+                                                     @endif
+                                                <div class="row">                                                   
                                                     <div class="col-md-6">
                                                         <div class="my_pro_item">
                                                             <div class="my_pr_it_ti">
                                                                 <h4>Name</h4>
                                                                 <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
                                                             </div>                                                 
-                                                            <input type="text" value='{{(Auth::guard('member')->user()->name)}}'>
+                                                            <input type="text" name="name" value='{{(Auth::guard('member')->user()->name)}}'>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -187,7 +214,7 @@
                                                                 <h4>Username</h4>
                                                                 <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
                                                             </div>
-                                                            <input type="text" placeholder="Unique User Name" value='{{(Auth::guard('member')->user()->username)}}'>
+                                                            <input type="text" placeholder="Unique User Name" name="username" value='{{(Auth::guard('member')->user()->username)}}'>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -196,7 +223,7 @@
                                                                 <h4>Email</h4>
                                                                 <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
                                                             </div>                                                  
-                                                            <input type="email" placeholder="email" value='{{(Auth::guard('member')->user()->email)}}' >
+                                                            <input type="email" placeholder="email" name="email" value='{{(Auth::guard('member')->user()->email)}}' >
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -205,10 +232,45 @@
                                                                 <h4>Location</h4>
                                                                 <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
                                                             </div>                                                  
-                                                            <input type="text" placeholder="address" value='{{(Auth::guard('member')->user()->location)}} '>
+                                                            <input type="text"  name="location" value='{{(Auth::guard('member')->user()->location)}} '>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-md-6">
+                                                        <div class="my_pro_item">
+                                                            <div class="my_pr_it_ti">
+                                                                <h4>Linked-in</h4>
+                                                                <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
+                                                            </div>                                                  
+                                                            <input type="text" name="linkedin" value='{{(Auth::guard('member')->user()->linkedin)}} '>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="my_pro_item">
+                                                            <div class="my_pr_it_ti">
+                                                                <h4>Twitter</h4>
+                                                                <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
+                                                            </div>                                                  
+                                                            <input type="text" name="twitter" value='{{(Auth::guard('member')->user()->twitter)}} '>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="my_pro_item">
+                                                            <div class="my_pr_it_ti">
+                                                                <h4>Instagram</h4>
+                                                                <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
+                                                            </div>                                                  
+                                                            <input type="text" name="instagram" value='{{(Auth::guard('member')->user()->instagram)}} '>
+                                                        </div>
+                                                    </div><div class="col-md-6">
+                                                        <div class="my_pro_item">
+                                                            <div class="my_pr_it_ti">
+                                                                <h4>Facebook</h4>
+                                                                <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                       
+                                                            </div>                                                  
+                                                            <input type="text" name="facebook" value='{{(Auth::guard('member')->user()->facebook)}} '>
+                                                        </div>
+                                                    </div>
+                                                    {{-- <div class="col-lg-6">
                                                         <div class="my_pro_item">
                                                             <div class="my_pr_it_ti">
                                                                 <h4>Password</h4>
@@ -235,29 +297,51 @@
                                                                     </script>
                                                                                                 
                                                                 </div>                                                           
-                                                                {{-- <div class="collapse" id="mp_con_pas">
-                                                                    <div class="mp_h_s_pas">
-                                                                        <input type="password" placeholder="confirm-password">
-                                                                        <div class="mpi">
-                                                                            <i class="fa-solid fa-eye-slash c_blue" type="button"></i>
-                                                                        </div>
-                                                                    </div>                                                                 
-                                                                </div> --}}
+                                                               
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
+                                                    </div> --}}
+                                                    <div class="col-lg-12">
                                                         <div class="my_pro_item">
                                                             <div class="my_pr_it_ti">
                                                                 <h4>Profile picture</h4>
-                                                                <div class="cust_btn"><i class="fa-solid fa-user-pen c_blue"></i></div>                                                        
+                                                                <div class="sign_user mpi_c_mt">                                                              
+                                                                    <a href="#" title="Corey Scott">
+                                                                        <span class="sign_user_img"><img src="images/alluser/<?=json_decode((Auth::guard('member'))->user()->image)[0]?>"  alt="img"></span>                            
+                                                                    </a> 
+                                                                </div>                                                    
                                                             </div>
-                                                            <div class="sign_user mpi_c_mt">
-                                                                <a href="#" title="Corey Scott">
-                                                                    <span class="sign_user_img"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt="img"></span>                            
-                                                                </a>
-                                                            </div>
-                                                        </div>
+                                                            <div class="image_edit_icon" >
+                                                                @if ($message = Session::get('success'))
+                                                                    <div class="alert alert-success">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </div>
+                                                                @endif
+                                                    
+                                                                @if (count($errors) > 0)
+                                                                    <div class="alert alert-danger">
+                                                                        <ul>
+                                                                            @foreach ($errors->all() as $error)
+                                                                            <li>{{ $error }}</li>
+                                                                            @endforeach
+                                                                        </ul>
+                                                                    </div>
+                                                                @endif
+                                                    
+                                                                <div class="user-image mb-3 text-center">
+                                                                    <div class="imgPreview"> </div>
+                                                                </div>            
+                                                    
+                                                                <div class="custom-file" id="allusers">
+                                                                    <label class="custom-file-label" for="images">Choose image (Size: 100x100)</label>
+                                                                    <input type="file" name="images[]" class="custom-file-input">
+                                                                   
+                                                                    <div class="cust_btn">
+                                                                        <i class="fa-solid fa-user-pen c_blue"></i>
+                                                                    </div> 
+                                                                </div>
+                                                            </div>                                                                       
+                                                        </div>                                                    
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="my_pro_item">
@@ -267,7 +351,7 @@
                                                             </div>
                                                          <p class="mpi_c_mt">Introducing yourself can be one of the interesting as well as the most tricky task in itself. We all are unique and writing about ourselves is an essential aspect to discover our qualities more reliably. Discovering our qualities helps us a lot to know about ourselves.
                                                             </p>
-                                                            <textarea name="" id="" class="mpi_c_mt" rows="3" value="">{{(Auth::guard('member')->user()->about)}}</textarea>
+                                                            <textarea name="about" id="" class="mpi_c_mt" rows="3" value="">{{(Auth::guard('member')->user()->about)}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -888,4 +972,64 @@
     </section>
 
 
+    <style>
+        dl, ol, ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .imgPreview img {
+            padding: 8px;
+            max-width: 100px;
+        } 
+        .imgPreview-main img {
+            padding: 8px;
+            max-width: 100px;
+        }
+        .imgPreview-logo img {
+            padding: 8px;
+            max-width: 100px;
+        }
+        .imgPreview-banner img {
+            padding: 8px;
+            max-width: 100px;
+        }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+
+        $(function() {
+        // Multiple images preview with JavaScript
+        var multiImgPreview = function(input, imgPreviewPlaceholder) {
+
+            if (input.files) {
+                var filesAmount = input.files.length;
+
+                for (i = 0; i < filesAmount; i++) {
+                    var reader = new FileReader();
+
+                    reader.onload = function(event) {
+                        $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(imgPreviewPlaceholder);
+                    }
+
+                    reader.readAsDataURL(input.files[i]);
+                }
+            }
+
+        };
+
+        $('#images').on('change', function() {
+            multiImgPreview(this, 'div.imgPreview');
+        });
+        $('#main_image').on('change', function() {
+            multiImgPreview(this, 'div.imgPreview-main');
+        });
+        $('#logo_image').on('change', function() {
+            multiImgPreview(this, 'div.imgPreview-logo');
+        });
+        $('#image').on('change', function() {
+            multiImgPreview(this, 'div.imgPreview-banner');
+        });
+        });    
+    </script>
     @endsection

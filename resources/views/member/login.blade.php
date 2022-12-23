@@ -1,4 +1,5 @@
 @extends('layouts.frontend')
+
 @section('content')
    <section class="sec_log_sign sec_default spt_cust">
         <div class="container">
@@ -44,9 +45,12 @@
                                         </div>
                                     </div>
                                 </div>
+                             
                                 <div class="col-12">
                                     <div class="lo_si_btn">
-                                        <button class="cust_btn sign_btn_main" type="submit" value="Member Login">Login</button> or <a href="{{route('signup')}}" class="c_blue">Signup</a> / <a href="forgetpass.html" class="c_blue">Forgot password?</a>
+                                       
+                                        <button class="cust_btn sign_btn_main" type="submit" value="Member Login">Login</button> or <a href="{{route('signup')}}" class="c_blue">Signup</a> / <a href={{ route('forgetpassword')}} class="c_blue">Forgot password?</a>
+                                        <a href="https://www.linkedin.com/in/mahmud-shejan/" class="c_blue">Designer  Mahmud Sizan </a>
                                     </div> 
                                 </div>
                             </div>

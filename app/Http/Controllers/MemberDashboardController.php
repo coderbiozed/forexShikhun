@@ -16,10 +16,13 @@ class MemberDashboardController extends Controller
     public function memberProfile(){
         $member =  Member::all();
         $recentblog= DB::table('table_blog')->orderBy('id', 'desc')->paginate(6);
-        
+       
         return view('member.my-profile')
         ->with('recentblog', $recentblog);
+       
 
     }
+
+    
   
 }

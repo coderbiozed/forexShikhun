@@ -15,7 +15,7 @@
                                 <div class="pub_ow">
                                     <a href="#">
                                         <div class="pub_img_inn">
-                                             <span class="pub_img"><img src="{{asset('assets/site')}}/images/homepage/me.png" alt="img"></span>
+                                             <span class="pub_img"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt="img"></span>
                                         </div>                                  
                                         <span class="fo_pub_o_ti">Mahmud Shejan</span>                               
                                     </a>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="f_ac_topic">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ad officiis aspernatur atque ea, modi ducimus veniam rem facere nostrum tempore, dolore inventore corporis esse consequuntur iure architecto asperiores dicta suscipit. Perferendis esse nostrum quidem repudiandae quod, error dignissimos nam. Laborum eos neque error aliquam, quidem nam maxime numquam? Voluptatum!</p>
-                            <div><img src="{{asset('assets/site')}}/images/homepage/360_F.jpg" alt="" class="c_cont_imgs"></div>
+                            <div><img src="{{asset('assets/frontend')}}/images/homepage/360_F.jpg" alt="" class="c_cont_imgs"></div>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ad officiis aspernatur atque ea, modi ducimus veniam rem facere nostrum tempore, dolore inventore corporis esse consequuntur iure architecto asperiores dicta suscipit. Perferendis esse nostrum quidem repudiandae quod, error dignissimos nam. Laborum eos neque error aliquam, quidem nam maxime numquam? Voluptatum!</p>
                         </div>  
                         <div class="f_ac_b_meta">
@@ -67,7 +67,7 @@
                                 <div class="pub_ow f_pub_o">
                                     <a href="#">
                                         <div class="pub_img_inn">
-                                             <span class="pub_img"><img src="{{asset('assets/site')}}/images/homepage/person-2.png" alt="img"></span>
+                                             <span class="pub_img"><img src="{{asset('assets/frontend')}}/images/homepage/person-2.png" alt="img"></span>
                                         </div>                                  
                                         <span class="fo_pub_o_ti"><span>Mark Kylee</span></span>                               
                                     </a>
@@ -109,7 +109,7 @@
                                         <div class="pub_ow f_pub_o">
                                             <a href="#">
                                                 <div class="pub_img_inn">
-                                                     <span class="pub_img"><img src="{{asset('assets/site')}}/images/homepage/person-1.jpg" alt="img"></span>
+                                                     <span class="pub_img"><img src="{{asset('assets/frontend')}}/images/homepage/person-1.jpg" alt="img"></span>
                                                 </div>                                  
                                                 <span class="fo_pub_o_ti">Mark Kyle</span>                               
                                             </a>
@@ -128,7 +128,7 @@
                                     <div class="f_ac_b_ml">
                                         <div class="f_ac_bl"><span class="heart"></span><span class="l_co">0</span></div>                           
                                         <div class="f_ac_rep"><span class="fas fa-reply ft_reply"></span><span>reply</span></div>                                        
-                                        <diiv class="com_ep_main">
+                                        <div class="com_ep_main">
                                             <span class="fas fa-ellipsis-h c_blue"></span>
                                             <div class="com_ep_main_cont" style="display: none;">
                                                 <div class="com_ep_main_inner">
@@ -136,7 +136,7 @@
                                                     <p class="com_ep_main_it">Delete</p>
                                                 </div>
                                             </div>
-                                        </diiv>
+                                        </div>
                                     </div>  
                                     <div class="f_ac_b_mr">
                                         <!-- <a href="" ><span class="fas fa-level-up-alt c_blue v_rep"></span><span class="c_blue">1</span> replies</a> -->
@@ -152,7 +152,7 @@
                                 <div class="pub_ow f_pub_o">
                                     <a href="#">
                                         <div class="pub_img_inn">
-                                             <span class="pub_img"><img src="{{asset('assets/site')}}/images/homepage/person-1.jpg" alt="img"></span>
+                                             <span class="pub_img"><img src="{{asset('assets/frontend')}}/images/homepage/person-1.jpg" alt="img"></span>
                                         </div>                                  
                                         <span class="fo_pub_o_ti">Mark Kyle</span>                               
                                     </a>
@@ -185,7 +185,7 @@
                                 <div class="pub_ow f_pub_o">
                                     <a href="#">
                                         <div class="pub_img_inn">
-                                             <span class="pub_img"><img src="{{asset('assets/site')}}/images/homepage/person-3.jpg" alt="img"></span>
+                                             <span class="pub_img"><img src="{{asset('assets/frontend')}}/images/homepage/person-3.jpg" alt="img"></span>
                                         </div>                                  
                                         <span class="fo_pub_o_ti"><span>Mark Kyle</span></span>                               
                                     </a>
@@ -219,7 +219,7 @@
                                         <div class="pub_ow f_pub_o">
                                             <a href="#">
                                                 <div class="pub_img_inn">
-                                                     <span class="pub_img"><img src="{{asset('assets/site')}}/images/homepage/person-1.jpg" alt="img"></span>
+                                                     <span class="pub_img"><img src="{{asset('assets/frontend')}}/images/homepage/person-1.jpg" alt="img"></span>
                                                 </div>                                  
                                                 <span class="fo_pub_o_ti">Mark Kyle</span>                               
                                             </a>
@@ -272,7 +272,7 @@
                     <div class="forum_dis_main fo_dis_side">
                         <div class="fo_post_o">
                             <div class="f_p_o_img">
-                                <span class="f_p_o_i_inn"><img src="{{asset('assets/site')}}/images/homepage/me.png" alt="img"></span>
+                                <span class="f_p_o_i_inn"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt="img"></span>
                            </div>
                            <h4 class="f_p_o_name">Mahmud Shejan</h4>
                            <span class="f_p_o_ti"><span class="c_blue">Senior</span></span>
@@ -290,6 +290,8 @@
                                </div>
                            </div>
                         </div>
+                       
+              
 
                         <h4 class="f_p_o_rp_title"><span class="c_blue">Mahmud's</span> Recent Posts</h4>
                         <div class="fo_post_o_rp">                           

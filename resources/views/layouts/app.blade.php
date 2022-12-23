@@ -9,13 +9,14 @@
           crossorigin="anonymous"/>
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/930024346158768188/1003218757424009236/Forex-shikhun-froms.ai-1-fav.png" type="image/x-icon">
           
-           <!-- DataTables -->
-           
-          <!-- DataTables end-->
+         
 
          <link href="{{ mix('css/app.css') }}" rel="stylesheet">
          <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
-
+  <!-- DataTables -->
+  <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+  
+    <!-- DataTables end-->
     @yield('third_party_stylesheets')
 
     @stack('page_css')
@@ -46,8 +47,8 @@
                              class="img-circle elevation-2"
                              alt="User Image">
                         <p>
-                            {{ Auth::user()->name }}
-                            <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small>
+                           <h2>Forex Shikhun</h2>
+                            <small></small>
                         </p>
                     </li>
                     <!-- Menu Footer-->
@@ -79,9 +80,9 @@
     <!-- Main Footer -->
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.0.5
+            <b>Version</b> Forex_Shikhun 0101
         </div>
-        <strong>Copyright &copy; 2014-2022 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
+        <strong>Developed  By<a href="https://www.linkedin.com/in/biozed-hossain/"> 🦾   Biozed Hossain  👨‍💻</a>.</strong> All rights
         reserved.
     </footer>
 </div>
@@ -111,7 +112,28 @@
             }
     </style>
 
-  
+   <!--  data table -->
+   <script>
+        $(document).ready(function () {
+    var eventFired = function (type) {
+        var n = $('#demo_info')[0];
+        n.innerHTML += '<div>' + type + ' event - ' + new Date().getTime() + '</div>';
+        n.scrollTop = n.scrollHeight;
+    };
+ 
+    $('#example')
+        .on('order.dt', function () {
+            eventFired('Order');
+        })
+        .on('search.dt', function () {
+            eventFired('Search');
+        })
+        .on('page.dt', function () {
+            eventFired('Page');
+        })
+        .DataTable();
+}); 
+    </script> 
   
     <!-- DataTables  & Plugins end-->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -119,18 +141,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
     
-      <!--  data table -->
-      <script>
-        $(document).ready( function () {
-         $('#myTable').DataTable();
-         } );
-       </script>
-    <script type="text/javascript">
-        $('#publish_date').datepicker({  
-        format: 'dd-mm-yyyy',
-        autoclose: true,
-        });  
-    </script> 
+     
     <!-- Text Editor -->
     <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
     <script src="{{ asset('assets/ckfinder/ckfinder.js') }}"></script>
@@ -194,7 +205,7 @@
                 $("#course_slug").val(Text);        
         });
     </script>
-    <!-- Course Lesson Auto Slug Filled field -->
+    <!--  Lesson Auto Slug Filled field -->
     <script type="text/javascript">
         $("#lesson_title").keyup(function(){
                 var Text = $(this).val();
@@ -203,9 +214,8 @@
                 $("#lesson_slug").val(Text);        
         });
     </script>
-  
 
-
+     
     @yield('third_party_scripts')
 
     @stack('page_scripts')

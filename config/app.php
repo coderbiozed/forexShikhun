@@ -181,10 +181,14 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Intervention\Image\ImageServiceProvider::class,
+        
+        
+        // <!-- 👀23-9- Here I did add New Provider Intervention 👀 -->
         /*
          * Package Service Providers...
          */
+        Shetabit\Visitor\Provider\VisitorServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -213,6 +217,8 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Visitor' => Shetabit\Visitor\Facade\Visitor::class,
     ])->toArray(),
    
 

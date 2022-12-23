@@ -20,6 +20,7 @@ class BlogController extends AppBaseController
 
     public function __construct(BlogRepository $blogRepo)
     {
+       
         $this->blogRepository = $blogRepo;
     }
     
@@ -57,7 +58,7 @@ class BlogController extends AppBaseController
      * @return Response
      */
     public function store(CreateBlogRequest $request)
-    {
+    {   
         $input = $request->all();
 
         $request->validate([

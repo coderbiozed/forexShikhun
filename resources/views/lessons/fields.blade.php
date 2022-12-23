@@ -3,6 +3,7 @@
     {!! Form::label('course_id', 'Course Name:') !!}
     {!! Form::number('course_id',  null, ['class' => 'form-control']) !!}
 </div>  --}}
+
 <!-- Course Id Field -->
 <div class="form-group col-sm-6" id="lessons">
     {!! Form::label('course_id', 'Course Name:') !!}

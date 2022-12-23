@@ -221,6 +221,15 @@ $('.heart').click((e) => {
  // my-profile-pass-hide-show ends
 
 
+  // blog like icon change toggle
+
+  // $('.b_meta i').click(function () {
+  //   $(".b_meta .far, .b_meta .fa-solid").toggleClass("b_meta far b_meta fa-solid ");
+  // });
+
+ // blog like icon change toggle
+
+
  // my-profile-dash-menu-starts
 
  $('.my_pro_nav').click(function () {
@@ -250,10 +259,20 @@ $('.heart').click((e) => {
 
  // user-profile-follow-btn-end
  
- // Blog Share Link Function
+ // Blog details Share Link Function
 
  $(".bt_sha_tog_main").click(function (){
   $('.bt_sha_tog_con').fadeToggle();
+ });
+
+// Blog  Share Link Function
+
+// $(".bt_sha_tog_main").click(function (){
+//   $('.bt_sha_tog_co').fadeToggle();
+//  });
+
+ $(".share_blog").click(function (){
+  $('.bt_sha_tog_co').fadeToggle();
  });
 
 
@@ -289,4 +308,42 @@ $('.loadmore-one').simpleLoadMore({
 
 $('.social').socialLinkBuilder({
   
+});
+
+//add rating 👍⭐⭐⭐⭐ function
+$(".add_review").click(function(){
+  $(".nav_cust").css({"position":"unset"});
+  $("#myBtn").css({"position":"unset"});
+  $("body").css({"overflow":"hidden"});
+ });
+ $(".re_close").click(function(){
+  $("#myBtn").css({"position":"fixed"});
+  $(".nav_cust").css({"position":"sticky"});
+  $("body").css({"overflow":"visible"});
+ });
+ $(function(){
+  $('.fa-star').click(function(){
+      var clickedId = $(this).data('star');
+      $('.fa-star').removeClass('selected animated tada');
+      $('.fa-star').each(function(){
+          if($(this).data('star') <= clickedId){
+              var star = $(this);
+              setTimeout(function(){
+                  star.addClass('selected animated tada');
+              }, 75 * parseInt($(this).data('star')));
+          }
+      });
+      $('.btn').removeClass('disabled');
+  });
+  $('.btn').click(function(e){
+     e.preventDefault();
+     $(this)
+         .unbind('click')
+         .removeClass('bg-teal bounceInUp')
+         .addClass('bg-light-blue wobble')
+         .attr('href', '')
+         .attr('target', '_blank')
+         .find('.pad-5')
+         .html('Follow @petjato');
+  });
 });

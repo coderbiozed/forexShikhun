@@ -11,7 +11,7 @@ if ($routeName == "course-details") {
     $image = asset('images/' . json_decode($course->image)[0]);
 }
 
-    $lessonall = DB::table('lessons')->Where('course_id',  $course->id)->count(); 
+    $lessonall = DB::table('lessons')->Where('course_id', $course->id)->count(); 
     
 ?>
     <section class="c_det_hero sec_default spt_cust">
@@ -31,7 +31,7 @@ if ($routeName == "course-details") {
                                             <div class="c_count">Lessons - <span class="c_blue">{{  $lessonall  }}</span></div>
                                             <div class="course_rating">
                                                 <i class="far fa-star c_dark_cy"></i>
-                                                <span>{{ $course->rating}}</span>
+                                                <span>{{ $course->rating }}</span>
                                             </div>
                                         </div>
                                         <div class="course_des">
@@ -71,9 +71,7 @@ if ($routeName == "course-details") {
                                         <div class="col-md-6">
                                             <div class="c_bt_des checkin">
                                                 <h4>What you will learn ?</h4>
-                                                {!! $course->what_learn !!}
-                                               
-                                                                                                                                         
+                                                {!! $course->what_learn !!}                                                                                                                                       
                                             </div>
                                         </div>
                                     </div>
@@ -84,13 +82,11 @@ if ($routeName == "course-details") {
                                     <div class="row">
                                         <div class="col-md-6">
                                             <h5 class="c_det_sh_title">Share :</h5>
-                                            <div class="c_det_share">
-                                                <div class="cust_btn"><a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in"></i></a></div>
-                                                <div class="cust_btn"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></div> 
-                                                <div class="cust_btn"><a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a></div> 
-                                                <div class="cust_btn"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></div>
-                                                <div class="cust_btn"><a href="https://www.reddit.com/"><i class="fab fa-reddit-alien"></i></a></div>                                           
-                                            </div>
+                                                {{-- 😁😁 Social icon dynamic😁😁 --}} 
+                                             <div class="c_det_share social">
+                                               
+                                            </div> 
+                                                 {{-- 😁😁 Social icon dynamic😁😁 --}}
                                         </div>
                                         <div class="col-md-6">
                                             <h5 class="c_nav_title">Course List :</h5>
@@ -195,7 +191,7 @@ if ($routeName == "course-details") {
                         <hr class="c_divider">
                         <div class="c_content_navs">
                             <a id="prev" class="cust_btn">Prev</a>
-                            <a href="" class="cust_btn">
+                            <a href="{{route('course-rating')}}" class="cust_btn">
                                 <i class="far fa-star c_dark_cy"></i>
                                 <span>4.5</span>
                             </a>

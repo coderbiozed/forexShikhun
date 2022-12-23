@@ -13,7 +13,7 @@
                         <div class="acc_items nav nav-pills" id="v-pills-tab">                           
                             <div class="nav-link active" id="cat_1-tab" data-bs-toggle="pill" data-bs-target="#cat_1" role="tab" aria-controls="cat_1" aria-selected="true">
                                 <div class="acc_item">
-                                    <a href="" class="acc_it_a active"><span class="fas fa-th-list me-2 c_blue"></span><span>Categories</span></a>                               
+                                    <a href="#" class="acc_it_a active"><span class="fas fa-th-list me-2 c_blue"></span><span>Categories</span></a>                               
                                 </div>
                             </div>
                             <div class="nav-link " id="cat_2-tab" data-bs-toggle="pill" data-bs-target="#cat_2" role="tab" aria-controls="cat_2" aria-selected="false">
@@ -46,7 +46,7 @@
                         </div>
                         <div class="cat_se_ad">
                             <div class="add_cat">
-                                <a href="#" title="Add New Topic"><i class="fas fa-plus"></i></a>
+                                <a href="{{ route('create.forum.post') }}" title="Add New Topic"><i class="fas fa-plus"></i></a>
                             </div>
                             <div class="fo_acc_search">
                                 <form class="fo_acc_form">
@@ -102,7 +102,7 @@
                                                 </div>
                                                 <div class="fo_cat_bot">
                                                     <div class="fcb_it">
-                                                        <a href="#" class="fw-bold"><span class="c_blue me-2">➤</span>Candlesticks, Chart Patterns, and Price Action</a>
+                                                        <a href="{{route('forum-category-details')}}" class="fw-bold"><span class="c_blue me-2">➤</span>Candlesticks, Chart Patterns, and Price Action</a>
                                                     </div>
                                                     <div class="fcb_it">
                                                         <a href="#" class="fw-bold"><span class="c_blue me-2">➤</span>Trading Psychology</a>
@@ -353,13 +353,13 @@
                                     <div class="col-lg-5 col-xl-4">
                                         <div class="fo_side">
                                             <div class="fo_side_bar_head">
-                                                <h3><span class="border_b">Latest Discussion</span><span class="fo_top_ico fas fa-comments c_blue"></span></h3>
+                                               <h3><span class="border_b">Latest Discussion</span><span class="fo_top_ico fas fa-comments c_blue"></span></h3>
                                             </div>
                                             <div class="fo_la_dis">
                                                 <div class="fo_la_to">
                                                     <div>
                                                         <div class="sign_user">
-                                                            <a href="#" title="Corey Scott">
+                                                            <a href="{{ route('user-profile') }}" title="Corey Scott">
                                                                 <span class="sign_user_img"><img src="{{asset('assets/frontend')}}/images/homepage/person-1.jpg" alt="img"></span>                            
                                                             </a>
                                                         </div>

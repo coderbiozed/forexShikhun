@@ -1,4 +1,18 @@
-<!-- need to remove -->
+
+    <!---- searchnav -- -->
+    <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+        <button class="btn btn-sidebar bg-info">
+        <i class="fas fa-search fa-fw nav-icon"></i>
+        </button>
+        </div>
+        </div>
+    </div>
+    <!-- need to remove -->
+
+
 <li class="nav-item">
     <a href="{{ route('home') }}" class="nav-link cust_btn {{ Request::is('home') ? 'active' : '' }}">
         <i class="nav-icon fas fa-home c_blue"></i>
@@ -56,12 +70,12 @@
 
 <li class="nav-item">
     <a href="{{ route('quotes.index') }}" class="nav-link cust_btn {{ Request::is('quotes*') ? 'active' : '' }}">
-        <i class="nav-icon fa fa-comment c_pink"></i>
+        <i class="nav-icon fa fa-quote-left c_pink"></i>
         <p>Quotes
             <?php
             $quoteall = DB::table('quote')->count(); 
             ?>
-            {{-- <span class="badge bg-dark right ">{{  $quoteall }}</span> --}}
+            <span class="badge bg-dark right ">{{  $quoteall }}</span>
         </p>
     </a>
 </li>
@@ -70,13 +84,16 @@
     <a href="{{ route('faqcats.index') }}"><i class="fa fa-edit"></i><span>Faqcats</span></a>
 </li> --}}
 
-{{-- <li class="nav-item menu-open">
+{{-- <li class="nav-item">
     <a href="#" class="nav-link cust_btn  {{ Request::is('faqcats* && faqs*') ? 'active' : '' }}">
-        <i class="nav-icon fas fa-question"></i>
+        <i class="nav-icon fas fa-question text-info"></i>
         <p>
           FAQ's
+          <?php
+            $faqs = DB::table('faqs')->count(); 
+            ?>
           <i class="fas fa-angle-left right"></i>
-          <span class="badge badge-info right">6</span>
+          <span class="badge badge-info right">{{$faqs}}</span>
         </p>
       </a>
       <ul class="nav nav-treeview">
@@ -92,12 +109,10 @@
             <p>Faq's</p>
           </a>
         </li>
-    </ul>
-</li> --}}
+        </ul>
+</li>    --}}
 
-{{-- <li class="{{ Request::is('faqs*') ? 'active' : '' }}">
-    <a href="{{ route('faqs.index') }}"><i class="fa fa-edit"></i><span>Faqs</span></a>
-</li> --}}
+
 <li class="nav-item">
     <a href="{{ route('users') }}" class="nav-link cust_btn {{ Request::is('users*') ? 'active' : '' }}">
        <i class="nav-icon fas fa-user-plus text-dark"></i>
@@ -107,6 +122,41 @@
             ?>
             <span class="badge bg-dark right ">{{  $user }}</span>
         </p>
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a href="{{ route('comments.index') }}" class="nav-link cust_btn {{ Request::is('comments*') ? 'active' : '' }}">
+       <i class="nav-icon fa fa-comment  text-warning "></i>
+        <p>Comments
+            <?php
+            $comments = DB::table('comments')->count(); 
+            ?>
+            <span class="badge bg-warning right">{{  $comments }}</span>
+        </p>
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a href="{{ route('allusers.index') }}" class="nav-link cust_btn {{ Request::is('allusers*') ? 'active' : '' }}">
+       <i class="nav-icon fas fa-user-plus text-white"></i>
+        <p>All Member
+            <?php
+            $allusers = DB::table('member')->count(); 
+            ?>
+            <span class="badge bg-light right">{{  $allusers }}</span>
+        </p>
+    </a>
+</li>
+
+
+
+<li class="nav-item">
+    <a href="{{ route('reviews.index') }}" class="nav-link  cust_btn {{ Request::is('reviews*') ? 'active' : '' }}">
+        <i class="fa fa-star nav-icon"></i>
+        <p>Reviews</p>
     </a>
 </li>
 

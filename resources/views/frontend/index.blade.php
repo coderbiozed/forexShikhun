@@ -56,27 +56,45 @@
                                 <p class="l_articles_cont_des"> {!! Str::limit(strip_tags($blog->description), 50) !!}</p>
                                 <hr class="articles_divider">  
                                 <div class="l_articles_bottom_cont">
-                                    <!-- <div class="bottom_cont_parts"><a href="#"><span class="far fa-heart c_pink"></span></a><span>9.5k</span></div>
-                                    <div class="bottom_cont_parts"><span class="far fa-eye c_blue"></span><span>24.5k</span></div> -->
+                                   {{-- <div class="bottom_cont_parts"><a href="#"><span class="far fa-heart c_pink"></span></a><span>9.5k</span></div> --}}
+                                     <div class="bottom_cont_parts"><span class="far fa-eye c_blue"></span><span>0.0k</span></div> 
+                                     {{--🥰🥰 Like view and count start 🥰🥰 --}}
+                                @php $likes = DB::table('blog_member')->where('member_id', $blog->id)->count();@endphp
+                                <div class="bottom_cont_parts"><a href="#"><span class="fa-solid fa-heart c_pink"></span></a><span>{{$likes}}</span></div>
+                               
+                                {{--👉👇 {{$blog->likedMembers->count()}} --}}
+                                  {{--🥰🥰 Like view and count end 🥰🥰 --}}
+
+                                    {{-- 🥰🥰share icon daynamic🥰🥰 --}}
                                     <div class="bottom_cont_parts">
-                                        <div class="bt_sha_tog_main">
-                                            <span class="fas fa-share c_violet c_pointer"></span>
-                                            <span class="bt_sha_tog_con">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                            </span>
-                                        </div>
-                                        <span>Share</span>
+                                        <a href="#collapseExample"
+                                        onclick="replay(this)"
+                                        class="share_blog"
+                                        dataBlogId="{{ $blog->id }}"
+                                        aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        <span class="fas fa-share c_violet"></span>                                
+                                       </a><span>Share</span>
                                     </div>
-                                    
+                                    {{-- 🥰🥰share icon daynamic🥰🥰 --}}
                                     <div class="bottom_cont_parts"><span class="far fa-clock c_orange"></span><span>{{ \Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span></div>                            
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
+                    {{-- 🥰🥰share icon daynamic🥰🥰--}}
+                    <div class="b_meta" style="display:none;">
+                        <input type="hidden" id="blogId" name="blogId" value="{{isset($blog->id)}}">
+                        <div class="bt_sha_tog_main shareDiv" style="position: relative;">
+                            <span class="bt_sha_tog_co" style="display:none; position:absolute">
+                                <div class="social d-flex" id="blog-social">
+                                        {{-- Social Icon --}}
+                                </div> 
+                            </span>                    
+                        </div>                     
+                    </div>
+                    {{-- 🥰🥰share icon daynamic🥰🥰--}}
                     <!-- View More Area -->
                 <div class="col-12">
                     <div class="load_more_articles">
@@ -483,43 +501,48 @@
                 </div>
                 <div class="col-12">
                     <div class="owl-carousel owl-theme">
+                        @foreach($reviews as $reviews)
                         <div class="item">
-                            <div class="review_main">
-                                <div class="review_top">
-                                    <div class="review_quote">
-                                        <p class="review_des"><span class="fas fa-quote-left review_quote_i"></span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero iste tempore modi, quibusdam debitis earum esse perferendis voluptatibus voluptate qui.</p>
-                                    </div>
-                                    <div class="review_rating_social">
-                                        <div class="review_rating">
-                                            <div class="ri_sha">
-                                                <span class="far fa-star c_dark_cy"></span>
-                                                <span>4.5</span>
+                            <a href="{{route('course-rating') }}">
+                                <div class="review_main">
+                                    <div class="review_top">
+                                        <div class="review_quote">
+                                            <p class="review_des"><span class="fas fa-quote-left review_quote_i"></span>{!! Str::limit(strip_tags($reviews->description), 200) !!}</p>
+                                        </div>
+                                        <div class="review_rating_social">
+                                            <div class="review_rating">
+                                                <div class="ri_sha">
+                                                    <span class="far fa-star c_dark_cy"></span>
+                                                    <span>{{ $reviews->rating}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="review_owner_social">
+                                                <div class="ri_sha">
+                                                    <a href="#" class="review_owner_li"><i class="fab fa-linkedin-in"></i></a>
+                                                    <a href="#" class="review_owner_tw"><i class="fab fa-twitter"></i></a>
+                                                    <a href="#" class="review_owner_ig"><i class="fab fa-instagram"></i></a>
+                                                    <a href="#" class="review_owner_fb"><i class="fab fa-facebook-f"></i></a>
+                                                </div>                                          
                                             </div>
                                         </div>
-                                        <div class="review_owner_social">
-                                            <div class="ri_sha">
-                                                <a href="#" class="review_owner_li"><i class="fab fa-linkedin-in"></i></a>
-                                                <a href="#" class="review_owner_tw"><i class="fab fa-twitter"></i></a>
-                                                <a href="#" class="review_owner_ig"><i class="fab fa-instagram"></i></a>
-                                                <a href="#" class="review_owner_fb"><i class="fab fa-facebook-f"></i></a>
-                                            </div>                                          
+                                    </div>
+                                    <div class="review_bottom">
+                                        <div class="review_owner_det">
+                                            <div class="re_ow_img_inn">
+                                                <div class="review_owner_img"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt=""></div>
+                                            </div>                                       
+                                            <div class="review_owner_name"><a href="#">{{ $reviews->author}}</a></div>
+                                        </div>
+                                        <div class="review_date">
+                                            <div>03/17/2022</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="review_bottom">
-                                    <div class="review_owner_det">
-                                        <div class="re_ow_img_inn">
-                                            <div class="review_owner_img"><img src="{{asset('assets/frontend')}}/images/homepage/me.png" alt=""></div>
-                                        </div>                                       
-                                        <div class="review_owner_name"><a href="#">Mahmud Shejan</a></div>
-                                    </div>
-                                    <div class="review_date">
-                                        <div>03/17/2022</div>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="item">
+                        @endforeach
+                        
+                        {{-- <div class="item">
                             <div class="review_main">
                                 <div class="review_top">
                                     <div class="review_quote">
@@ -822,7 +845,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>               
+                        </div>                --}}
                     </div>
                 </div>
             </div>
@@ -835,4 +858,11 @@
             <img src="{{asset('assets/frontend')}}/images/homepage/de-shape-3.png" alt="image" class="art_shp_8">
         </div>
     </section>
+    <script type="text/javascript">
+        function replay(caller){
+            document.getElementById('blogId').value=$(caller).attr('dataBlogId');
+                $('.shareDiv').insertAfter($(caller));
+                $('.shareDiv').show();
+        }
+    </script>
     @endsection

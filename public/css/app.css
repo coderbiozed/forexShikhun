@@ -26386,9 +26386,9 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   }
 }
 .info-box {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+
   border-radius: 0.25rem;
-  background-color: #fff;
+
   display: flex;
   margin-bottom: 1rem;
   min-height: 80px;
@@ -27450,7 +27450,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 .users-list > li img {
   border-radius: 50%;
-  height: auto;
+  /* height: auto; */
   max-width: 100%;
 }
 .users-list > li > a:hover,

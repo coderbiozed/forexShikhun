@@ -23,7 +23,11 @@ return new class extends Migration
             $table->string('user_title'); 
             $table->longText('about');
             $table->string('location');
-            $table->string('image');
+            $table->string('linkedin');
+            $table->string('twitter');
+            $table->string('instagram');
+            $table->string('facebook');
+            $table->string('image')->default('default.png');
             $table->tinyInteger('status');
             $table->rememberToken();
             $table->timestamps();

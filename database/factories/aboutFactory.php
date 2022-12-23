@@ -22,7 +22,7 @@ class aboutFactory extends Factory
     public function definition()
     {
         return [
-            'hero_title' => $this->faker->word,
+        'hero_title' => $this->faker->word,
         'hero_des' => $this->faker->text,
         'hero_des_small' => $this->faker->text,
         'hero_image' => $this->faker->word,
